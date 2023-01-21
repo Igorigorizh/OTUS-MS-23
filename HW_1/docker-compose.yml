@@ -1,13 +1,14 @@
 version: '3.9'
 services:
   otus_hw_1:
-    build:
+   build:
       context: .
       dockerfile: ./project/Dockerfile
       args:
-      - medialib_bld_ver=1
-    image: otus_hw_1
-    restart: always 
-    ports:
-      - "8000:8000"
-    
+      - otus_bld_ver=1
+   image: otus_hw_1
+
+   command: uvicorn main:app --reload --reload-dir fpgenerator --host 0.0.0.0  
+   ports:
+      - 8000:8000
+   restart: always    
