@@ -1,0 +1,13 @@
+version: '3.9'
+services:
+  otus_hw_1:
+    build:
+      context: .
+      dockerfile: ./project/Dockerfile
+      args:
+      - medialib_bld_ver=1
+    image: otus_hw_1
+    restart: always 
+    ports:
+      - "8000:8000"
+    
