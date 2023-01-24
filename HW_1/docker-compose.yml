@@ -6,7 +6,7 @@ services:
       dockerfile: ./project/Dockerfile
       args:
       - otus_bld_ver=1
-   image: otus_hw_1
+   image: igorizhov/otus_ms_23_hw_1
 
    command: uvicorn main:app --reload --reload-dir project --host 0.0.0.0  
    ports:
