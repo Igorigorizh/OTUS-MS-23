@@ -1,4 +1,4 @@
-## Simplified version of Home work 1 without docker compose. Uses partly git clone.
+## Simplified version of Home work 1 without docker compose. Uses git clone subfolder copy feature with sparse.
 ### Build image
 local build image:  $docker build -t igorizhov/otus_ms_23_hw_1c .
 
