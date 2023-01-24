@@ -8,7 +8,7 @@ RUN pip3 install --no-cache-dir --upgrade -r requirements.txt
 RUN git clone  --depth 1 --filter=blob:none --sparse https://github.com/Igorigorizh/OTUS-MS-23;
 WORKDIR /home/Otus/OTUS-MS-23/
 
-git sparse-checkout set -- HW_1c
+RUN git sparse-checkout set -- HW_1c
 WORKDIR /home/Otus/OTUS-MS-23/HW_1c
 
 CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8000"]
