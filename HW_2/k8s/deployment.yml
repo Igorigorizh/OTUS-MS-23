@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hw_2
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      component: hw_2
+  template:
+    metadata:
+      labels:
+        component: hw_2
+    spec:
+      containers:
+        - name: hw_2
+          image: "igorizhov/otus_ms_23_hw_1c"
+          ports:
+            - containerPort: 8000
