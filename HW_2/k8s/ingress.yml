@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Ingress
+metadata:
+  name: hw-2-ingress
+spec:
+  rules:
+    - host: arch.homework/health
+      http:
+        paths:
+          - path: /myapp($|/)(.*)
+            backend:
+              serviceName: hello-service
+              servicePort: 8000
