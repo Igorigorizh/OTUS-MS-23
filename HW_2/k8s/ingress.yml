@@ -1,13 +1,15 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: hw-2-ingress
+  name: hw-2
 spec:
   rules:
-    - host: arch.homework/health
+    - host: arch.homework
       http:
         paths:
-          - path: /health($|/)(.*)
+          - path: /health
             backend:
-              serviceName: hw-2-service
-              servicePort: 8000
+              service:
+                 name: hw-2
+                 port:
+                   number: 8000

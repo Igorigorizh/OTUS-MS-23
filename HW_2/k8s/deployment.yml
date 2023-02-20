@@ -1,22 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: hw-2-deployment
+  name: hw-2
 spec:
   replicas: 2
   strategy:
     type: Recreate
   selector:
     matchLabels:
-      component: hw-2-app
+      component: hw-2
   template:
     metadata:
       labels:
-        component: hw-2-app
+        component: hw-2
     spec:
       containers:
         - name: hw-2
           image: "igorizhov/otus_ms_23_hw_1c"
           ports:
-            - name: web-hw-2
-            - containerPort: 8000
+            - name: hw-2
+              containerPort: 8000
