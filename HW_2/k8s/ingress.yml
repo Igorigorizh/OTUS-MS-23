@@ -8,6 +8,7 @@ spec:
       http:
         paths:
           - path: /health
+            pathType: Prefix
             backend:
               service:
                  name: hw-2
