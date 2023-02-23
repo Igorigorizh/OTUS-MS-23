@@ -1,8 +1,9 @@
 ## k8s version of Home work 1c. Reuses image igorizhov/otus_ms_23_hw_1c from docker hub. Uses git clone subfolder copy feature with sparse.
 
-### Run docker container with health service on port 8000
+### Start application with health check on port 8000 with readiness and liveness probe 
 $kubectl apply -f .
 
-curl check with $curl localhost:8000/health/
+curl check: $curl arch.homework:8000/health/ -> OK
 
-also possible to check with fastApi swagger at http://localhost:8000/docs 
+rewrite: arch.homework:8000/otusapp/igor/health - still not works???
+ 
