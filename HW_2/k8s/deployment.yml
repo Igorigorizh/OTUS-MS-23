@@ -18,5 +18,16 @@ spec:
         - name: hw-2
           image: "igorizhov/otus_ms_23_hw_1c"
           ports:
-            - name: hw-2
-              containerPort: 8000
+            - containerPort: 8000
+          livenessProbe:
+            httpGet:
+              path: /health/
+              port: 8000
+            initialDelaySeconds: 15
+            periodSeconds: 5
+          readinessProbe:
+            httpGet:
+              path: /health/
+              port: 8000
+            initialDelaySeconds: 10
+            periodSeconds: 5
