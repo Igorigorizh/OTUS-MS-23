@@ -8,4 +8,3 @@ $kubectl apply -f .
 curl check: $curl arch.homework/health/
 
 rewrite: arch.homework/otusapp/igor/health
- 
