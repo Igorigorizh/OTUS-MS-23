@@ -5,7 +5,6 @@ $cd .../OTUS-MS-23/HW_2/k8s
 
 $kubectl apply -f .  
 
-curl check: $curl arch.homework/health/ -> OK
+curl check: $curl arch.homework/health/
 
-rewrite: arch.homework/otusapp/igor/health -> Ok 
- 
+rewrite: arch.homework/otusapp/igor/health
