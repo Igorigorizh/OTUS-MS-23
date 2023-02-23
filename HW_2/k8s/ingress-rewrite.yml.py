@@ -4,12 +4,13 @@ metadata:
   name: hw-2
   annotations:
     kubernetes.io/ingress.class: nginx
+    nginx.ingress.kubernetes.io/rewrite-target: /$2
 spec:
   rules:
     - host: arch.homework
       http:
         paths:
-          - path: /health
+          - path: /otusapp/igor($|/)(.*)
             pathType: Prefix
             backend:
               service:
